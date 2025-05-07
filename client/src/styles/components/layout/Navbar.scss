@@ -1,0 +1,38 @@
+@use '../../../styles/constants' as constants;
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: constants.$spacing-md;
+	background-color: constants.$color-white;
+	border-bottom: 1px solid constants.$color-border;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+
+	.logo {
+		font-size: constants.$font-size-lg;
+		font-weight: constants.$font-weight-bold;
+		color: constants.$color-primary;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	.nav-links {
+		display: flex;
+		gap: constants.$spacing-md;
+
+		a {
+			color: constants.$color-text-secondary;
+			font-size: constants.$font-size-sm;
+			text-decoration: none;
+			transition: color 0.2s ease;
+
+			&:hover {
+				color: constants.$color-primary;
+			}
+		}
+	}
+}

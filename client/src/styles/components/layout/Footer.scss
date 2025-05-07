@@ -1,0 +1,22 @@
+@use '../../../styles/constants' as constants;
+
+.footer {
+	background-color: constants.$color-white;
+	border-top: 1px solid constants.$color-border;
+	padding: constants.$spacing-md;
+	text-align: center;
+	color: constants.$color-text-secondary;
+	font-size: constants.$font-size-sm;
+	margin-top: constants.$spacing-xl;
+
+	.footer-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 constants.$spacing-sm;
+
+		span {
+			display: block;
+			margin-top: constants.$spacing-xs;
+		}
+	}
+}

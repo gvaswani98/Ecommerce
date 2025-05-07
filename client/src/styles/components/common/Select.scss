@@ -1,0 +1,47 @@
+@use '../../constants' as constants;
+
+.select-group {
+	display: flex;
+	flex-direction: column;
+	gap: constants.$spacing-xs;
+	width: 100%;
+
+	label {
+		font-size: constants.$font-size-sm;
+		font-weight: constants.$font-weight-medium;
+		color: constants.$color-text-secondary;
+	}
+
+	.form-select {
+		width: 100%;
+		padding: constants.$spacing-sm constants.$spacing-md;
+		border: 1px solid constants.$color-border;
+		border-radius: 4px;
+		background-color: constants.$color-white;
+		color: constants.$color-text-primary;
+		font-size: constants.$font-size-base;
+		appearance: none;
+		background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="14" height="10" viewBox="0 0 24 24" fill="none" stroke="%23777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>');
+		background-repeat: no-repeat;
+		background-position: right 0.75rem center;
+		background-size: 1rem;
+		transition: border-color 0.2s ease;
+
+		&:focus {
+			outline: none;
+			border-color: constants.$color-primary;
+			box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.15);
+		}
+	}
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		border: 0;
+	}
+}
