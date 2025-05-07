@@ -1,0 +1,20 @@
+@use '../../styles/constants' as constants;
+
+.home-page {
+	padding: constants.$spacing-lg constants.$spacing-md;
+	min-height: 70vh;
+
+	.product-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		gap: constants.$spacing-lg;
+		margin-top: constants.$spacing-lg;
+	}
+
+	.no-results {
+		text-align: center;
+		color: constants.$color-muted;
+		font-size: constants.$font-size-md;
+		margin-top: constants.$spacing-lg;
+	}
+}

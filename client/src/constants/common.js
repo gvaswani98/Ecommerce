@@ -1,0 +1,3 @@
+const DEFAULT_PAGE_LIMIT = 10;
+
+export { DEFAULT_PAGE_LIMIT };

@@ -1,0 +1,42 @@
+@use '../../constants' as constants;
+
+.input-group {
+	display: flex;
+	flex-direction: column;
+	gap: constants.$spacing-xs;
+	width: 100%;
+
+	label {
+		font-size: constants.$font-size-sm;
+		font-weight: constants.$font-weight-medium;
+		color: constants.$color-text-secondary;
+	}
+
+	.form-input {
+		width: 100%;
+		padding: constants.$spacing-sm constants.$spacing-md;
+		border: 1px solid constants.$color-border;
+		border-radius: 4px;
+		background-color: constants.$color-white;
+		color: constants.$color-text-primary;
+		font-size: constants.$font-size-base;
+		transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+		&:focus {
+			outline: none;
+			border-color: constants.$color-primary;
+			box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.15);
+		}
+	}
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		border: 0;
+	}
+}

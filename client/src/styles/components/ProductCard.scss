@@ -1,0 +1,47 @@
+@use '../../styles/constants' as constants;
+
+.product-card {
+	display: flex;
+	flex-direction: column;
+	background-color: constants.$color-surface;
+	border: 1px solid constants.$color-border;
+	border-radius: 8px;
+	padding: constants.$spacing-md;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+	transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+	&:hover {
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		transform: translateY(-2px);
+	}
+
+	.name {
+		font-size: constants.$font-size-md;
+		font-weight: constants.$font-weight-bold;
+		color: constants.$color-text-primary;
+		margin-bottom: constants.$spacing-xs;
+		text-transform: capitalize;
+	}
+
+	.description {
+		font-size: constants.$font-size-sm;
+		color: constants.$color-text-secondary;
+		margin-bottom: constants.$spacing-sm;
+		line-height: 1.4;
+	}
+
+	.meta {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: constants.$font-size-sm;
+		color: constants.$color-muted;
+		margin-top: auto;
+	}
+
+	.price {
+		color: constants.$color-primary;
+		font-size: constants.$font-size-md;
+		font-weight: constants.$font-weight-medium;
+	}
+}
